@@ -1333,6 +1333,21 @@ button.swiper-pagination-bullet {
     transform: translateX(0);
   }
 }
+.project-page .sec-let-chat {
+  margin: 86px 0 76px;
+}
+.project-page .sec-let-chat .img-box {
+  padding-bottom: 0;
+  height: 360px;
+}
+.project-page .sec-let-chat .text-box .txt-title {
+  color: #141313;
+}
+.project-page .sec-let-chat .text-box .btn-get {
+  border-color: #141313;
+  color: #141313;
+}
+
 .project {
   margin-top: 60px;
 }
@@ -1457,6 +1472,7 @@ button.swiper-pagination-bullet {
   height: 597px;
   margin-bottom: 0;
   background-color: #9B9B9B;
+  background: url(../images/img-thumb-project-detail-01.jpg) no-repeat center/cover;
 }
 .project-detail .content .inner {
   width: 846px;
@@ -1617,7 +1633,7 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   font-style: italic;
   font-family: "Roboto Serif";
-  color: #000;
+  color: #141313;
   letter-spacing: 0.975px;
   line-height: 32px;
 }
@@ -1666,13 +1682,16 @@ button.swiper-pagination-bullet {
      object-fit: cover;
 }
 .project-detail .detail-box .info-expand .text {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 15px;
   font-weight: 400;
   font-family: "Source Serif 4", sans-serif;
   color: #141313;
   letter-spacing: 0.975px;
   line-height: 32px;
+}
+.project-detail .detail-box .info-expand .text:first-child {
+  margin-top: 0;
 }
 .project-detail .detail-box .info-expand .text + .txt-hightlight {
   margin-top: 20px;
@@ -1700,7 +1719,20 @@ button.swiper-pagination-bullet {
   background-color: #141313;
   content: "";
 }
-.project-detail .detail-box .info-expand .text .text-bold {
+.project-detail .detail-box .info-expand .text.text-italic {
+  margin-top: 0;
+  font-style: italic;
+}
+.project-detail .detail-box .info-expand .text-link {
+  font-family: "Source Serif 4", sans-serif;
+  font-weight: 400;
+  color: #141313;
+  text-decoration: underline;
+}
+.project-detail .detail-box .info-expand .text-link:hover {
+  color: #000;
+}
+.project-detail .detail-box .info-expand .text-bold {
   display: block;
   margin-bottom: 8px;
   font-size: 15px;
@@ -1710,14 +1742,8 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.975px;
   line-height: 32px;
 }
-.project-detail .detail-box .info-expand .text .text-link {
-  font-family: "Source Serif 4", sans-serif;
-  font-weight: 400;
-  color: #141313;
-}
-.project-detail .detail-box .info-expand .text.text-italic {
-  margin-top: 16px;
-  font-style: italic;
+.project-detail .detail-box .info-expand > div[id] {
+  margin-top: 20px;
 }
 .project-detail .detail-box .image-full {
   width: 100%;
@@ -1729,7 +1755,8 @@ button.swiper-pagination-bullet {
 .project-detail .detail-box.is-open .btn-expand:after {
   transform: translateY(-50%) rotate(0);
 }
-.project-detail .txt-panel {
+.project-detail .text-panel {
+  overflow: hidden;
   display: block;
   position: relative;
   margin-top: 52px;
@@ -1740,19 +1767,22 @@ button.swiper-pagination-bullet {
   text-align: center;
   text-transform: uppercase;
 }
-.project-detail .txt-panel:before, .project-detail .txt-panel:after {
-  position: absolute;
-  top: 50%;
-  width: 42%;
+.project-detail .text-panel:before, .project-detail .text-panel:after {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
   height: 1px;
   background-color: #141313;
   content: "";
 }
-.project-detail .txt-panel:before {
-  left: 0;
+.project-detail .text-panel:before {
+  right: 20px;
+  margin-left: -50%;
 }
-.project-detail .txt-panel:after {
-  right: 0;
+.project-detail .text-panel:after {
+  left: 20px;
+  margin-right: -50%;
 }
 
 .testimonials-let-chat {
@@ -1932,7 +1962,7 @@ button.swiper-pagination-bullet {
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.let-chat .text-box .txt-tile {
+.let-chat .text-box .txt-title {
   display: block;
   margin-bottom: 15px;
   font-size: 50px;
@@ -1942,7 +1972,7 @@ button.swiper-pagination-bullet {
   line-height: 50px;
 }
 @media screen and (max-width: 1280px) {
-  .let-chat .text-box .txt-tile {
+  .let-chat .text-box .txt-title {
     font-size: 45px;
     line-height: 45px;
   }
@@ -1987,6 +2017,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: -52px;
   left: -41px;
+  z-index: 2;
   font-size: 0;
   width: 105px;
   height: 105px;
@@ -2316,6 +2347,7 @@ button.swiper-pagination-bullet {
   }
 }
 .workspace .sec-myprocess .info-box .myprocess {
+  display: none;
   margin-top: 36px;
 }
 .workspace .sec-myprocess .info-box .myprocess + .myprocess {
@@ -2468,19 +2500,19 @@ button.swiper-pagination-bullet {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.workspace .sec-let-chat .text-box .txt-tile {
+.workspace .sec-let-chat .text-box .txt-title {
   margin-bottom: 16px;
   font-size: 60px;
   line-height: 85px;
 }
 @media screen and (max-width: 1024px) {
-  .workspace .sec-let-chat .text-box .txt-tile {
+  .workspace .sec-let-chat .text-box .txt-title {
     font-size: 50px;
     line-height: 50px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .workspace .sec-let-chat .text-box .txt-tile {
+  .workspace .sec-let-chat .text-box .txt-title {
     font-size: 35px;
     line-height: 35px;
   }

@@ -251,6 +251,7 @@
         }
 
         .myprocess {
+          display: none;
           margin-top: 36px;
 
           &+.myprocess {
@@ -408,7 +409,7 @@
       }
 
       .text-box {
-        .txt-tile {
+        .txt-title {
           margin-bottom: 16px;
           font-size: 60px;
           line-height: 85px;
