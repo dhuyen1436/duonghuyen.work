@@ -112,14 +112,23 @@ var openExpandDetail = function() {
 
 // Show more 
 var showMore = function() {
-	var x = 2;
 	$('.info-box .myprocess').slice(0, 2).show();
+
 	$('.btn-showmore').on('click', function(e) {
 		e.preventDefault();
-		x = x + 2;
-		$('.info-box .myprocess').slice(0, x).slideDown();
-		$(this).parents('.sec-myprocess').find('.txt-dot').hide();
-		$(this).text('SHOW LESS');
+
+		var relatedItems = $('.info-box .myprocess').slice(2);
+		if ($('.info-box .myprocess').hasClass('show')) {
+			relatedItems.slideUp().removeClass('show');
+			$(this).parents('.sec-myprocess').find('.txt-dot').show();
+			$(this).text('SHOW MORE');
+		} else {
+			relatedItems.slideDown('slow').addClass('show');
+			$(this).parents('.sec-myprocess').find('.txt-dot').hide();
+			$(this).text('SHOW LESS');
+		}
+
+		return false;
 	});
 };
 
