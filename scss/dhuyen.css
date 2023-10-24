@@ -1230,7 +1230,7 @@ button.swiper-pagination-bullet {
   z-index: -1;
   width: 672px;
   height: 468px;
-  background: url(../images/img-spot.png) no-repeat;
+  background: url(../images/img-spot.svg) no-repeat;
   background-size: 100% auto;
   content: "";
 }
