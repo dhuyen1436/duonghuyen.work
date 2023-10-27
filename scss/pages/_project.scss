@@ -1,9 +1,10 @@
-.project-page {
+.wrap {
   .sec-let-chat {
     margin: 86px 0 76px;
+
     .img-box {
-      padding-bottom: 0;
       height: 360px;
+      padding-bottom: 0;
     }
 
     .text-box {
@@ -150,8 +151,12 @@
     .spot {
       height: 597px;
       margin-bottom: 0;
-      background-color: $primary3;
       background: url(../images/img-thumb-project-detail-01.jpg) no-repeat center/cover;
+      background-color: $primary3;
+
+      @media #{$mobile} {
+        height: 428px;
+      }
     }
 
     .content {
@@ -175,6 +180,11 @@
         font-family: 'Koulen', sans-serif;
         color: $primary2;
         line-height: 56px;
+
+        @media #{$mobile} {
+          font-size: 35px;
+          line-height: 42px;
+        }
       }
 
       .info {
@@ -182,6 +192,12 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 16px;
+
+        @media #{$mobile} {
+          align-items: flex-start;
+          flex-direction: column;
+          margin-top: 22px;
+        }
       }
 
       .label {
@@ -203,6 +219,11 @@
         letter-spacing: 0.975px;
         line-height: 32px;
 
+        @media #{$mobile} {
+          margin-top: 8px;
+          font-size: 12px;
+        }
+
         &>em {
           font-weight: 500;
           font-style: italic;
@@ -212,6 +233,10 @@
 
     .tree-content {
       margin-top: 40px;
+
+      @media #{$mobile} {
+        margin-top: 20px;
+      }
 
       .btn-tree {
         position: relative;
@@ -225,6 +250,10 @@
         color: $primary4;
         letter-spacing: 0.075px;
         line-height: 22px;
+
+        @media #{$mobile} {
+          font-size: 12px;
+        }
 
         &:before {
           position: absolute;
@@ -247,11 +276,21 @@
         ol,
         li {
           list-style: decimal;
+
+          @media #{$mobile} {
+            &::marker {
+              font-size: 12px;
+            }
+          }
         }
       }
 
       .list-tree {
         padding: 16px 24px 16px 50px;
+
+        @media #{$mobile} {
+          padding: 16px 16px 16px 40px;
+        }
       }
 
       .item-tree {
@@ -265,6 +304,10 @@
           color: $primary;
           letter-spacing: 0.675px;
           line-height: 27px;
+
+          @media #{$mobile} {
+            font-size: 12px;
+          }
 
           &:after {
             position: absolute;
@@ -298,7 +341,7 @@
           border: 1px solid $primary;
           background-color: $primary5;
           color: $primary;
-          
+
           &:before {
             background: url(../images/ic-list-bl.svg) no-repeat;
           }
@@ -317,6 +360,10 @@
         font-weight: 700;
         color: $primary2;
         text-transform: uppercase;
+
+        @media #{$mobile} {
+          margin-bottom: 20px;
+        }
 
         &:after {
           position: absolute;
@@ -345,6 +392,12 @@
           letter-spacing: 0.975px;
           line-height: 32px;
 
+          @media #{$mobile} {
+            padding: 8px 0 8px 20px;
+            font-size: 13px;
+            line-height: 24px;
+          }
+
           &:before {
             position: absolute;
             top: 0;
@@ -364,6 +417,10 @@
             flex-wrap: wrap;
             align-items: center;
             border-bottom: 1px solid rgba(20, 19, 19, 0.10);
+
+            @media #{$mobile} {
+              align-items: flex-start;
+            }
           }
 
           dt {
@@ -375,6 +432,11 @@
             color: $primary2;
             letter-spacing: 0.72px;
             line-height: 27px;
+
+            @media #{$mobile} {
+              margin-top: 2px;
+              font-size: 14px;
+            }
           }
 
           dd {
@@ -386,6 +448,10 @@
             color: $primary2;
             letter-spacing: 0.975px;
             line-height: 32px;
+
+            @media #{$mobile} {
+              font-size: 13px;
+            }
           }
         }
 
@@ -403,6 +469,10 @@
           color: $primary2;
           letter-spacing: 0.975px;
           line-height: 32px;
+
+          @media #{$mobile} {
+            font-size: 13px;
+          }
 
           &:first-child {
             margin-top: 0;
@@ -438,7 +508,7 @@
                 background-color: $primary2;
                 content: '';
               }
-            } 
+            }
           }
 
           &.text-italic {
@@ -449,8 +519,8 @@
 
         .text {
           &-link {
-            font-family: 'Source Serif 4', sans-serif;
             font-weight: 400;
+            font-family: 'Source Serif 4', sans-serif;
             color: $primary2;
             text-decoration: underline;
 
@@ -468,10 +538,15 @@
             color: $primary2;
             letter-spacing: 0.975px;
             line-height: 32px;
+
+            @media #{$mobile} {
+              font-size: 14px;
+              line-height: 24px;
+            }
           }
         }
 
-        & > div[id] {
+        &>div[id] {
           margin-top: 20px;
         }
       }
@@ -493,8 +568,8 @@
     }
 
     .text-panel {
-      overflow: hidden;
       display: block;
+      overflow: hidden;
       position: relative;
       margin-top: 52px;
       font-size: 36px;
@@ -504,14 +579,18 @@
       text-align: center;
       text-transform: uppercase;
 
+      @media #{$mobile} {
+        font-size: 24px;
+      }
+
       &:before,
       &:after {
-        position: relative;
         display: inline-block;
-        vertical-align: middle;
+        position: relative;
         width: 50%;
         height: 1px;
         background-color: $primary2;
+        vertical-align: middle;
         content: '';
       }
 
@@ -738,6 +817,142 @@
         font-size: 45px;
         line-height: 45px;
       }
+    }
+  }
+}
+
+.case-study {
+  .spot {
+    background-image: url(../images/img-thumb-project-detail-02.jpg);
+  }
+
+  &-content {
+    margin-top: 64px;
+    padding-bottom: 64px;
+
+    @media #{$mobile} {
+      margin-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .text-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: $primary;
+    }
+
+    .image-box {
+      margin-top: 24px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .case-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: -18px -14px;
+
+      .case-item {
+        width: calc(50% - 28px);
+        margin: 18px 14px;
+        text-align: center;
+
+        @media #{$mobile} {
+          width: 100%;
+          margin: 20px 0 0;
+          padding-bottom: 20px;
+          border-bottom: 1px dashed $primary3;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        .case-link {
+          overflow: hidden;
+        }
+
+        .image-box {
+          margin-top: 0;
+          transition: all 0.5s ease-in-out 0s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .text-desc {
+          display: block;
+          margin-top: 16px;
+          font-size: 20px;
+          font-weight: 700;
+          color: $primary2;
+          text-transform: uppercase;
+
+          @media #{$mobile} {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .teaedown {
+      &-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 28px;
+
+        @media #{$mobile} {
+          margin: 20px -10px -10px;
+        }
+      }
+
+      &-item {
+        width: 33.33%;
+        text-align: center;
+
+        @media #{$mobile} {
+          width: calc(50% - 20px);
+          margin: 10px;
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: $primary;
+
+        @media #{$mobile} {
+          font-size: 12px;
+        }
+      }
+
+      &-image {
+        max-width: 140px;
+        margin: 24px auto 0;
+
+        @media #{$mobile} {
+          width: 80px;
+          margin-top: 14px;
+        }
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .sec-let-chat {
+    margin-bottom: 183px;
+
+    @media #{$mobile} {
+      margin: 50px 0;
     }
   }
 }

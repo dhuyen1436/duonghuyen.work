@@ -1333,17 +1333,17 @@ button.swiper-pagination-bullet {
     transform: translateX(0);
   }
 }
-.project-page .sec-let-chat {
+.wrap .sec-let-chat {
   margin: 86px 0 76px;
 }
-.project-page .sec-let-chat .img-box {
-  padding-bottom: 0;
+.wrap .sec-let-chat .img-box {
   height: 360px;
+  padding-bottom: 0;
 }
-.project-page .sec-let-chat .text-box .txt-title {
+.wrap .sec-let-chat .text-box .txt-title {
   color: #141313;
 }
-.project-page .sec-let-chat .text-box .btn-get {
+.wrap .sec-let-chat .text-box .btn-get {
   border-color: #141313;
   color: #141313;
 }
@@ -1471,8 +1471,13 @@ button.swiper-pagination-bullet {
 .project-detail .spot {
   height: 597px;
   margin-bottom: 0;
-  background-color: #9B9B9B;
   background: url(../images/img-thumb-project-detail-01.jpg) no-repeat center/cover;
+  background-color: #9B9B9B;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .spot {
+    height: 428px;
+  }
 }
 .project-detail .content .inner {
   width: 846px;
@@ -1494,11 +1499,24 @@ button.swiper-pagination-bullet {
   color: #141313;
   line-height: 56px;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .post-title .title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+}
 .project-detail .post-title .info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .post-title .info {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 22px;
+  }
 }
 .project-detail .post-title .label {
   margin-right: 20px;
@@ -1518,12 +1536,23 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.975px;
   line-height: 32px;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .post-title .time {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
 .project-detail .post-title .time > em {
   font-weight: 500;
   font-style: italic;
 }
 .project-detail .tree-content {
   margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .tree-content {
+    margin-top: 20px;
+  }
 }
 .project-detail .tree-content .btn-tree {
   position: relative;
@@ -1537,6 +1566,11 @@ button.swiper-pagination-bullet {
   color: #F0F0EE;
   letter-spacing: 0.075px;
   line-height: 22px;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .tree-content .btn-tree {
+    font-size: 12px;
+  }
 }
 .project-detail .tree-content .btn-tree:before {
   position: absolute;
@@ -1558,8 +1592,19 @@ button.swiper-pagination-bullet {
 .project-detail .tree-content .detail-tree li {
   list-style: decimal;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .tree-content .detail-tree ol::marker,
+  .project-detail .tree-content .detail-tree li::marker {
+    font-size: 12px;
+  }
+}
 .project-detail .tree-content .list-tree {
   padding: 16px 24px 16px 50px;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .tree-content .list-tree {
+    padding: 16px 16px 16px 40px;
+  }
 }
 .project-detail .tree-content .item-tree {
   padding: 12px 0;
@@ -1572,6 +1617,11 @@ button.swiper-pagination-bullet {
   color: #000;
   letter-spacing: 0.675px;
   line-height: 27px;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .tree-content .item-tree > a {
+    font-size: 12px;
+  }
 }
 .project-detail .tree-content .item-tree > a:after {
   position: absolute;
@@ -1612,6 +1662,11 @@ button.swiper-pagination-bullet {
   color: #141313;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .detail-box .btn-expand {
+    margin-bottom: 20px;
+  }
+}
 .project-detail .detail-box .btn-expand:after {
   position: absolute;
   top: 50%;
@@ -1637,6 +1692,13 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.975px;
   line-height: 32px;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .detail-box .info-expand .txt-hightlight {
+    padding: 8px 0 8px 20px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
 .project-detail .detail-box .info-expand .txt-hightlight:before {
   position: absolute;
   top: 0;
@@ -1655,6 +1717,11 @@ button.swiper-pagination-bullet {
   align-items: center;
   border-bottom: 1px solid rgba(20, 19, 19, 0.1);
 }
+@media screen and (max-width: 768px) {
+  .project-detail .detail-box .info-expand .info-overview dl {
+    align-items: flex-start;
+  }
+}
 .project-detail .detail-box .info-expand .info-overview dt {
   width: 25%;
   margin-right: 20px;
@@ -1665,6 +1732,12 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.72px;
   line-height: 27px;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .detail-box .info-expand .info-overview dt {
+    margin-top: 2px;
+    font-size: 14px;
+  }
+}
 .project-detail .detail-box .info-expand .info-overview dd {
   width: calc(75% - 20px);
   padding: 18px 0 17px;
@@ -1674,6 +1747,11 @@ button.swiper-pagination-bullet {
   color: #141313;
   letter-spacing: 0.975px;
   line-height: 32px;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .detail-box .info-expand .info-overview dd {
+    font-size: 13px;
+  }
 }
 .project-detail .detail-box .info-expand .image {
   width: 100%;
@@ -1689,6 +1767,11 @@ button.swiper-pagination-bullet {
   color: #141313;
   letter-spacing: 0.975px;
   line-height: 32px;
+}
+@media screen and (max-width: 768px) {
+  .project-detail .detail-box .info-expand .text {
+    font-size: 13px;
+  }
 }
 .project-detail .detail-box .info-expand .text:first-child {
   margin-top: 0;
@@ -1724,8 +1807,8 @@ button.swiper-pagination-bullet {
   font-style: italic;
 }
 .project-detail .detail-box .info-expand .text-link {
-  font-family: "Source Serif 4", sans-serif;
   font-weight: 400;
+  font-family: "Source Serif 4", sans-serif;
   color: #141313;
   text-decoration: underline;
 }
@@ -1742,6 +1825,12 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.975px;
   line-height: 32px;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .detail-box .info-expand .text-bold {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 .project-detail .detail-box .info-expand > div[id] {
   margin-top: 20px;
 }
@@ -1756,8 +1845,8 @@ button.swiper-pagination-bullet {
   transform: translateY(-50%) rotate(0);
 }
 .project-detail .text-panel {
-  overflow: hidden;
   display: block;
+  overflow: hidden;
   position: relative;
   margin-top: 52px;
   font-size: 36px;
@@ -1767,13 +1856,18 @@ button.swiper-pagination-bullet {
   text-align: center;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .project-detail .text-panel {
+    font-size: 24px;
+  }
+}
 .project-detail .text-panel:before, .project-detail .text-panel:after {
-  position: relative;
   display: inline-block;
-  vertical-align: middle;
+  position: relative;
   width: 50%;
   height: 1px;
   background-color: #141313;
+  vertical-align: middle;
   content: "";
 }
 .project-detail .text-panel:before {
@@ -1975,6 +2069,130 @@ button.swiper-pagination-bullet {
   .let-chat .text-box .txt-title {
     font-size: 45px;
     line-height: 45px;
+  }
+}
+
+.case-study .spot {
+  background-image: url(../images/img-thumb-project-detail-02.jpg);
+}
+.case-study-content {
+  margin-top: 64px;
+  padding-bottom: 64px;
+}
+@media screen and (max-width: 768px) {
+  .case-study-content {
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.case-study-content .text-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+.case-study-content .image-box {
+  margin-top: 24px;
+}
+.case-study-content .image-box img {
+  width: 100%;
+}
+.case-study-content .case-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -18px -14px;
+}
+.case-study-content .case-list .case-item {
+  width: calc(50% - 28px);
+  margin: 18px 14px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .case-study-content .case-list .case-item {
+    width: 100%;
+    margin: 20px 0 0;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #9B9B9B;
+  }
+  .case-study-content .case-list .case-item:first-child {
+    margin-top: 0;
+  }
+}
+.case-study-content .case-list .case-item .case-link {
+  overflow: hidden;
+}
+.case-study-content .case-list .case-item .image-box {
+  margin-top: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+.case-study-content .case-list .case-item .image-box:hover {
+  transform: scale(1.1);
+}
+.case-study-content .case-list .case-item .text-desc {
+  display: block;
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #141313;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .case-study-content .case-list .case-item .text-desc {
+    font-size: 14px;
+  }
+}
+.case-study-content .teaedown-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+@media screen and (max-width: 768px) {
+  .case-study-content .teaedown-list {
+    margin: 20px -10px -10px;
+  }
+}
+.case-study-content .teaedown-item {
+  width: 33.33%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .case-study-content .teaedown-item {
+    width: calc(50% - 20px);
+    margin: 10px;
+  }
+}
+.case-study-content .teaedown-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+  .case-study-content .teaedown-title {
+    font-size: 12px;
+  }
+}
+.case-study-content .teaedown-image {
+  max-width: 140px;
+  margin: 24px auto 0;
+}
+@media screen and (max-width: 768px) {
+  .case-study-content .teaedown-image {
+    width: 80px;
+    margin-top: 14px;
+  }
+}
+.case-study-content .teaedown-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.case-study .sec-let-chat {
+  margin-bottom: 183px;
+}
+@media screen and (max-width: 768px) {
+  .case-study .sec-let-chat {
+    margin: 50px 0;
   }
 }
 
@@ -2489,21 +2707,16 @@ button.swiper-pagination-bullet {
   }
 }
 .workspace .sec-let-chat {
-  margin-top: 100px;
+  margin: 100px 0 0;
 }
 .workspace .sec-let-chat .img-box {
   height: 350px;
-  padding-bottom: 0;
-}
-.workspace .sec-let-chat .img-box img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .workspace .sec-let-chat .text-box .txt-title {
   margin-bottom: 16px;
   font-size: 60px;
   line-height: 85px;
+  color: #fff;
 }
 @media screen and (max-width: 1024px) {
   .workspace .sec-let-chat .text-box .txt-title {
@@ -2516,6 +2729,10 @@ button.swiper-pagination-bullet {
     font-size: 35px;
     line-height: 35px;
   }
+}
+.workspace .sec-let-chat .text-box .btn-get {
+  border-color: #fff;
+  color: #fff;
 }
 .workspace .sec-testimonials {
   margin-top: 100px;

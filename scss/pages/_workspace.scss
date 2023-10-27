@@ -396,16 +396,10 @@
     }
 
     &-let-chat {
-      margin-top: 100px;
+      margin: 100px 0 0;
 
       .img-box {
         height: 350px;
-        padding-bottom: 0;
-
-        img {
-          height: 100%;
-          object-fit: cover;
-        }
       }
 
       .text-box {
@@ -413,6 +407,7 @@
           margin-bottom: 16px;
           font-size: 60px;
           line-height: 85px;
+          color: $color_fff;
 
           @media #{$tablet} {
             font-size: 50px;
@@ -423,6 +418,11 @@
             font-size: 35px;
             line-height: 35px;
           }
+        }
+        
+        .btn-get {
+          border-color: $color_fff;
+          color: $color_fff;
         }
       }
     }
